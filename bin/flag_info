@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/flag_info'
+
+FlagInfo::CLI.new.call #always here on the executable file, #We use this module b/c .... module + class + new (is the initalize, which is a class method or initalize method) + call###(instance method) :: is name spacing or nesting
