@@ -21,11 +21,11 @@ class FlagInfo::CLI
     @country.each.with_index(1) do |country, index| 
     puts "#{index}. #{country}" 
   end 
-  end 
+   
   
   def get_user_country
-    chosen_country = gets.strip
-    if valid_input(chosen_country, @country)
+    chosen_country = gets.strip.to_i
+    show_facts_for(chosen_country) if valid_input(chosen_country, @country)
     end 
   end 
     
@@ -33,6 +33,15 @@ class FlagInfo::CLI
     input.to_i <= data.length && input.to_i > 0 
   end 
   
+  def show_facts_for(chosen_country)
+    country = @country =[chosen_country - 1]
+    puts "Here are facts for #{country}"
+    #binding.pry
+    #FlagInfo::Fact.all.each.with_index(1) do |event|
+    #puts event.name 
+    #end
+    #get_user_event
+  end 
   
   
 end 
