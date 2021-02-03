@@ -11,8 +11,10 @@ class FlagInfo::CLI
   end 
   
   def get_countries #going to get the list of countries from the scraper class
+  @country = FlagInfo::Country.all
+  
     # To be scraped instead 
-    @country = ["Afghanistan", "Algeria", "Albania", "Angola"] #adding the @country to an array, @country is available throughout the instances 
+    #@country = ["Afghanistan", "Algeria", "Albania", "Angola"] #adding the @country to an array, @country is available throughout the instances 
   end 
   
   def list_countries
@@ -34,7 +36,7 @@ class FlagInfo::CLI
   end 
   
   def show_facts_for(chosen_country)
-    country = @country =[chosen_country - 1]
+    country = @country[chosen_country - 1]
     puts "Here are facts for #{country}"
     #binding.pry
     #FlagInfo::Fact.all.each.with_index(1) do |event|
