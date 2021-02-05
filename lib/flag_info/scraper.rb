@@ -15,9 +15,13 @@ def self.scrape_country
   country.each do |c|
     name = c.text
     FlagInfo::Country.new(name)
-    #binding.pry
 end
 end 
+
+def self.scrape_link
+  
+end 
+
 end 
 
 

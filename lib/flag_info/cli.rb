@@ -1,6 +1,6 @@
 class FlagInfo::CLI 
   def call
-    puts "Welcome to Facts of the World"
+    puts "\nWelcome to Facts of the World\n"
      get_countries
      list_countries
      get_user_country 

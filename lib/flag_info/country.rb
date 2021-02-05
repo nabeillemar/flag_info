@@ -1,6 +1,6 @@
 class FlagInfo::Country
   @@all = []
-  attr_accessor :name 
+  attr_accessor :name, :facts
   
   def initialize(name)
     @name = name 
