@@ -11,8 +11,6 @@ class FlagInfo::CLI
   end 
   
   def get_countries #going to get the list of countries from the scraper class
-  FlagInfo::Country.new("Afghanistan")
-  FlagInfo::Country.new("Albania")
   @country = FlagInfo::Country.all
   
     # To be scraped instead 
