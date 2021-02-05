@@ -11,6 +11,8 @@ class FlagInfo::CLI
   end 
   
   def get_countries #going to get the list of countries from the scraper class
+  FlagInfo::Country.new("Afghanistan")
+  FlagInfo::Country.new("Albania")
   @country = FlagInfo::Country.all
   
     # To be scraped instead 
@@ -21,7 +23,7 @@ class FlagInfo::CLI
     #list the countries, telling the options,
     puts "Choose a month to see events."
     @country.each.with_index(1) do |country, index| 
-    puts "#{index}. #{country}" 
+    puts "#{index}. #{country.name}" 
   end 
    
   

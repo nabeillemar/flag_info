@@ -1,3 +1,6 @@
+class FlagInfo::Country 
+
+
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
@@ -56,3 +59,5 @@ puts doc
 
  "Finished running code"
 # This line stops us seeing the sometimes very long return values of Nokogiri. Feel free to uncomment it if you don't want it.
+
+end 
