@@ -1,9 +1,25 @@
-class FlagInfo::Country 
+class FlagInfo::Scraper 
 
 
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+
+
+def self.scrape_country
+  site = "https://flagpedia.net/index"  
+  doc = Nokogiri::HTML(open(site))
+  binding.pry
+
+end 
+end 
+
+
+
+
+
+
+=begin
 
 ## Replace this with the site you want to try scraping. 
 ## Make sure it's a string.
@@ -61,3 +77,5 @@ puts doc
 # This line stops us seeing the sometimes very long return values of Nokogiri. Feel free to uncomment it if you don't want it.
 
 end 
+
+=end

@@ -8,6 +8,7 @@ class FlagInfo::Country
   end
   
   def self.all
+    FlagInfo::Scraper.scrape_country if @@all.empty?
     @@all 
   end 
   
