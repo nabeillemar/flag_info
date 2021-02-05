@@ -9,8 +9,14 @@ require 'pry'
 def self.scrape_country
   site = "https://flagpedia.net/index"  
   doc = Nokogiri::HTML(open(site))
-  binding.pry
-
+  
+  country = doc.css("ul.flag-grid").first.css("span")
+  
+  country.each do |c|
+    name = c.text
+    FlagInfo::Country.new(name)
+    #binding.pry
+end
 end 
 end 
 

@@ -37,7 +37,7 @@ class FlagInfo::CLI
   
   def show_facts_for(chosen_country)
     country = @country[chosen_country - 1]
-    puts "Here are facts for #{country}"
+    puts "Here are facts for #{country.name}"
     #binding.pry
     #FlagInfo::Fact.all.each.with_index(1) do |event|
     #puts event.name 
