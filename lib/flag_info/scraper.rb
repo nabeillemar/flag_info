@@ -23,14 +23,28 @@ end
 def self.scrape_facts(country)
   url = "https://flagpedia.net#{country.ref}"
   doc = Nokogiri::HTML(open(url))
-  
+  binding.pry
   #doc.css("p").text
+  
   
 end 
 
+=begin
+name = "th",
+              attributes = [
+                #(Attr:0x153d5f8 { name = "scope", value = "row" })],
+              children = [ #(Text "Official name")]
+              }),
+            #(Text "\n\t\t\t"),
+            #(Element:0x159431c {
 
+<page break> --- Press enter to continue ( q<enter> to break ) --- <page break>
 
+              name = "td",
+              children = [ #(Text "Islamic Republic of Afghanistan")]
+              }),
 
+=end
 
 =begin
 def self.scrape_country
