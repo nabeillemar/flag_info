@@ -24,7 +24,13 @@ def self.scrape_facts(country)
   url = "https://flagpedia.net#{country.ref}"
   doc = Nokogiri::HTML(open(url))
   binding.pry
-  #doc.css("p").text
+   # flag_info = doc.css("p").text
+   # flag_info if flag_info != doc.css("p").text.strip.empty?
+   #return flag_info
+  # offical_name = doc.css("table tbody tr")[2].css("td").text
+  #  if doc.css("table tbody tr").text.include?("Capital") = true then run the code above
+  # doc.css("p").text.empty?
+  # doc.css("p").text.strip.empty?
   
   
 end 
