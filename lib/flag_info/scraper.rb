@@ -10,24 +10,41 @@ def self.scrape_country
   site = "https://flagpedia.net/index"  
   doc = Nokogiri::HTML(open(site))
   
-  country = doc.css("ul.flag-grid").first.css("span")
+  country = doc.css("ul.flag-grid a")
+  #ref = doc.css("ul.flag-grid a").attributes["href"]
+  
+  country.each do |c|
+    name = c.css("span").text
+    ref = c.attributes["href"].value
+    binding.pry
+    FlagInfo::Country.new(name)
+end
+end
+
+=begin
+def self.scrape_country
+  site = "https://flagpedia.net/index"  
+  doc = Nokogiri::HTML(open(site))
+  
+  country = doc.css("ul.flag-grid").css("span")
+  #ref = doc.css("ul.flag-grid a").attributes["href"]
   
   country.each do |c|
     name = c.text
+    binding.pry
     FlagInfo::Country.new(name)
 end
-end 
+end
+
+=end
+
 
 def self.scrape_facts(country)
-  FlagInfo::Facts.new("Islamic Republic of Afghanistan", country)
-  FlagInfo::Facts.new("fake test", country)
-end 
-
-def self.scrape_link
   
 end 
+end
 
-end 
+
 
 
 

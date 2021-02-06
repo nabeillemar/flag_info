@@ -17,9 +17,8 @@ class FlagInfo::Country
     @@all << self 
   end 
   
-  def facts
+  def get_facts
   FlagInfo::Scraper.scrape_facts(self) if @facts.empty?
-    @facts
   end 
   
   
