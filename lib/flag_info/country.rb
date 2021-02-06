@@ -4,6 +4,7 @@ class FlagInfo::Country
   
   def initialize(name)
     @name = name 
+    @facts = []
     save
   end
   
@@ -14,6 +15,11 @@ class FlagInfo::Country
   
   def save
     @@all << self 
+  end 
+  
+  def facts
+  FlagInfo::Scraper.scrape_facts(self) if @facts.empty?
+    @facts
   end 
   
   

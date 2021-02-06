@@ -18,6 +18,11 @@ def self.scrape_country
 end
 end 
 
+def self.scrape_facts(country)
+  FlagInfo::Facts.new("Islamic Republic of Afghanistan", country)
+  FlagInfo::Facts.new("fake test", country)
+end 
+
 def self.scrape_link
   
 end 
