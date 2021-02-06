@@ -16,10 +16,21 @@ def self.scrape_country
   country.each do |c|
     name = c.css("span").text
     ref = c.attributes["href"].value
-    binding.pry
-    FlagInfo::Country.new(name)
+    FlagInfo::Country.new(name, ref)
 end
 end
+
+def self.scrape_facts(country)
+  url = "https://flagpedia.net#{country.ref}"
+  doc = Nokogiri::HTML(open(url))
+  
+  #doc.css("p").text
+  
+end 
+
+
+
+
 
 =begin
 def self.scrape_country
@@ -39,9 +50,6 @@ end
 =end
 
 
-def self.scrape_facts(country)
-  
-end 
 end
 
 
