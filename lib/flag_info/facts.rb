@@ -1,10 +1,10 @@
 class FlagInfo::Facts
   @@all = []
-  attr_accessor :offical_name, :country
+  attr_accessor :name, :flag_summary
   
-  def initialize(offical_name, country)
-    @offical_name = offical_name 
-    @country = country 
+  def initialize(name)
+    @name = name
+    @flag_summary = flag_summary
     add_to_country
     save
   end
@@ -21,6 +21,7 @@ class FlagInfo::Facts
     binding..pry
     @country.facts << self unless @country.facts.include?(self)
   end 
+  
   
 end 
 
