@@ -19,7 +19,7 @@ class FlagInfo::Country
   
   def get_facts
   FlagInfo::Scraper.scrape_facts(self)
-  binding.pry
+  #binding.pry
   end 
   
   

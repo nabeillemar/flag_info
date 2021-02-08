@@ -38,17 +38,21 @@ class FlagInfo::CLI
   def show_facts_for(chosen_country)
     country = @country[chosen_country - 1]
     country.get_facts
-    binding.pry
+    #binding.pry
     puts "Here are facts for #{country.name}"
     puts "The offical name is #{country.offical_name}"
+    if !country.flag_summary.empty?
     puts "Here is information about the flag 
     #{country.flag_summary}"
+  else 
+    puts "Sorry there is no information about the flag yet."
     #binding.pry
     #FlagInfo::Fact.all.each.with_index(1) do |event|
     #puts event.name 
     #end
     #get_user_event
   end 
+end
   
   
 end 
