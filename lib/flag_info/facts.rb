@@ -1,3 +1,5 @@
+=begin
+
 class FlagInfo::Facts
   @@all = []
   attr_accessor :name, :flag_summary
@@ -25,5 +27,5 @@ class FlagInfo::Facts
   
 end 
 
-  
+=end  
   

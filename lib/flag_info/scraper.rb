@@ -23,14 +23,18 @@ end
 def self.scrape_facts(country)
   url = "https://flagpedia.net#{country.ref}"
   doc = Nokogiri::HTML(open(url))
-  binding.pry
+  country.flag_summary = doc.css("p").text.strip
+  country.offical_name = doc.css("table tbody tr")[2].css("td").text.strip
+ # binding.pry
+=begin  
   info_page = doc.css("p")
   info_page.each do |s|
     flag_info = s.text.strip
     fact.flag_summary << flag_info
+=end
   end 
 end
-end
+
 
   #flag_info = doc.css("p").text
   # flag_info if flag_info != doc.css("p").text.strip.empty?
