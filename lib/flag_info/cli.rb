@@ -27,8 +27,12 @@ class FlagInfo::CLI
   
   def get_user_country
     chosen_country = gets.strip.to_i
-    show_facts_for(chosen_country) if valid_input(chosen_country, @country)
+    if valid_input(chosen_country, @country)
+     return show_facts_for(chosen_country)
+   else 
+      puts "Sorry that is not a valid input, please add the correct number of the country you want to learn more about."
     end 
+  end 
   end 
     
   def valid_input(input, data) # input would be the user input and data would be @country
