@@ -1,6 +1,6 @@
 class FlagInfo::CLI 
   def call
-    puts "\nWelcome to Facts of the World\n"
+    puts "\nWelcome to Flags of the World\n"
      get_countries
      list_countries
      get_user_country 
@@ -19,7 +19,7 @@ class FlagInfo::CLI
   
   def list_countries
     #list the countries, telling the options,
-    puts "Choose a month to see events."
+    puts "Choose a country to learn something new!"
     @country.each.with_index(1) do |country, index| 
     puts "#{index}. #{country.name}" 
   end 
