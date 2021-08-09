@@ -22,7 +22,7 @@ class FlagInfo::Country
   
   def get_facts #this generates the data to be scraped from Scraper.rb the scrape_facts method gets all the attributes and connects it to the country then adds it to the @@all, this gets connected to self because it is within the module next method in line
   FlagInfo::Scraper.scrape_facts(self) #this scrapes the data of the chosen country only
-  binding.pry
+  #binding.pry
   end 
   
   
