@@ -1,9 +1,9 @@
 class FlagInfo::CLI 
   def call
     puts "\nWelcome to Flags of the World\n"
-     get_countries
-     list_countries
-     get_user_country 
+     get_countries # get the list if countries from the scraper class 
+     list_countries # tells the user the countries
+     get_user_country # gets the input of the user
     # Method: get_facts_for(country) 
     # Method: lists_facts
     # Method: IDK but should I do like List list all countries, user choose country, give the user a selection of different attributes the user selects then it gives the information 
@@ -11,7 +11,7 @@ class FlagInfo::CLI
   end 
   
   def get_countries #going to get the list of countries from the scraper class
-  @country = FlagInfo::Country.all
+  @country = FlagInfo::Country.all # adding all the countries that we scrapped from the website into an array called @country 
   
     # To be scraped instead 
     #@country = ["Afghanistan", "Algeria", "Albania", "Angola"] #adding the @country to an array, @country is available throughout the instances 
