@@ -41,9 +41,9 @@ class FlagInfo::CLI
   end 
   
   def show_facts_for(chosen_country)
-    country = @country[chosen_country] #- 1] #it is minus 1 because the index starts at 0 but what is put out to the user starts at 1 because when we defined the list_countries method we said start at 1 so country varaible now equals the correct country 
+    country = @country[chosen_country - 1] #it is minus 1 because the index starts at 0 but what is put out to the user starts at 1 because when we defined the list_countries method we said start at 1 so country varaible now equals the correct country 
     country.get_facts #this calls the get_facts method from the country.rb file 
-    #binding.pry
+    binding.pry
     puts "Here are facts for #{country.name}" #adding the attribute 
     puts "The offical name is #{country.offical_name}" #adding the attrubute 
     if !country.flag_summary.empty? #if the summary is emopty it puts out something 
