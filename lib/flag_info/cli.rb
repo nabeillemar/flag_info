@@ -8,11 +8,6 @@ class FlagInfo::CLI
      puts "Would you like to search for another country or area? enter Y, if you would like to exit, enter 'exit'. "
      answer = gets.strip
      break if answer == 'exit'
-    # Method: get_facts_for(country) 
-    # Method: lists_facts
-    # Method: IDK but should I do like List list all countries, user choose country, give the user a selection of different attributes the user selects then it gives the information 
-    #should I add another loop here? so if they want to look at another country?
-  # binding.pry
     end
     puts "See you next time!"
   end 
@@ -42,7 +37,6 @@ class FlagInfo::CLI
       puts "Sorry that is not a invalid input, please look through the list and enter the correct number of the country or area you want to learn more about." #if not it will ask you this question 
     end 
   end 
-  #NEED TO ADD A LOOP HERE ------------------ LOOP HERE 
   end 
     
   def valid_input(input, data) # input would be the users input(which comes the method before this under chosen_country) and data would be @country
@@ -60,11 +54,6 @@ class FlagInfo::CLI
     #{country.flag_summary}"
   else 
     puts "Sorry there is no information about the flag yet."
-    #binding.pry
-    #FlagInfo::Fact.all.each.with_index(1) do |event|
-    #puts event.name 
-    #end
-    #get_user_event
   end 
 end
   
