@@ -5,7 +5,7 @@ class FlagInfo::CLI
      get_countries # get the list if countries from the scraper class 
      list_countries # tells the user the countries
      get_user_country # gets the input of the user, this also shows the facts for the user as well, validates, this has helper methods 
-     puts "Would you like to search for another country? enter Y, if you would like to exit, enter 'exit'. "
+     puts "Would you like to search for another country or area? enter Y, if you would like to exit, enter 'exit'. "
      answer = gets.strip
      break if answer == 'exit'
     # Method: get_facts_for(country) 
@@ -26,7 +26,7 @@ class FlagInfo::CLI
   
   def list_countries 
     #list the countries, telling the options to the user,
-    puts "Choose a country to learn something new!" #asks this 
+    puts "Type a the number of the corresponding countries & areas to learn something new!" #asks this 
     @country.each.with_index(1) do |country, index| #gives each country a number an index and we add 1 so the starting number is 1 not 0 or something
     puts "#{index}. #{country.name}" #puts out the index with the country name, index starts at 1.
   end 
@@ -39,7 +39,7 @@ class FlagInfo::CLI
      return show_facts_for(chosen_country) #
      break #should I add an exit here too, just in case the user wants to leave
    else 
-      puts "Sorry that is not a invalid input, please look through the list and enter the correct number of the country you want to learn more about." #if not it will ask you this question 
+      puts "Sorry that is not a invalid input, please look through the list and enter the correct number of the country or area you want to learn more about." #if not it will ask you this question 
     end 
   end 
   #NEED TO ADD A LOOP HERE ------------------ LOOP HERE 
